@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Home from './pages/Home';
+import Gps from './pages/Gps';
+import Solar from './pages/Solar';
+import Battery from './pages/Battery';
+import Motor from './pages/Motor';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path='/' exact component={Home}/>
+          <Route path='/motor' component={Motor}/>
+          <Route path='/battery' component={Battery}/>
+          <Route path='/solar' component={Solar}/>
+          <Route path='/gps' component={Gps}/>
+        </Switch>
+      </Router>
+    </>
   );
 }
 
