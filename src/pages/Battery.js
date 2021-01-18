@@ -3,8 +3,6 @@ import Voltage from '../components/Battery/Voltage'
 import Amperage from '../components/Battery/Amperage'
 import CellData from '../components/Battery/CellData'
 import EstimatedRange from '../components/Battery/EstimatedRange'
-import Grid from '@material-ui/core/Grid';
-import Paper from "@material-ui/core/Paper";
 import GridLayout from 'react-grid-layout';
 
 function Battery() {
