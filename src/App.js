@@ -7,6 +7,7 @@ import Gps from './pages/Gps';
 import Solar from './pages/Solar';
 import Battery from './pages/Battery';
 import Motor from './pages/Motor';
+import Map from './pages/Map'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path='/battery' component={Battery}/>
           <Route path='/solar' component={Solar}/>
           <Route path='/gps' component={Gps}/>
+          <Route path='/map' component={Map}/>
         </Switch>
       </Router>
     </>
