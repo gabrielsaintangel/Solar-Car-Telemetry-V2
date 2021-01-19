@@ -4,11 +4,8 @@ import PropTypes from 'prop-types';
 import { Bar } from 'react-chartjs-2';
 import {
   Box,
-  Button,
-  Borders,
   Card,
   CardContent,
-  CardHeader,
   Divider,
   useTheme,
   makeStyles,
@@ -16,10 +13,6 @@ import {
   Grid,
   Typography
 } from '@material-ui/core';
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
-import ArrowRightIcon from '@material-ui/icons/ArrowRight';
-
-
 
 const useStyles = makeStyles(() => ({
   root: {}
@@ -29,8 +22,7 @@ const CellData = ({ className, ...rest }) => {
   const classes = useStyles();
   const theme = useTheme();
 
-
-
+  // tried to use list comprehension to generate mock data, javascript makes it complicated 
   const data = {
     datasets: [
       {

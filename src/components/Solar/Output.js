@@ -14,6 +14,10 @@ import {
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 
+var currentVoltage = '52.54 Volts'
+var minVoltage = '31 Volts'
+var maxVoltage = '60 Volts'
+
 const useStyles = makeStyles((theme) => ({
   root: {
     height: '100%'
@@ -28,15 +32,9 @@ const useStyles = makeStyles((theme) => ({
   },
   minVoltageIcon: {
     color: colors.red[900]
-  },
-  VoltageValue: {
-    color: colors.red[900],
-    marginRight: theme.spacing(1)
   }
 }));
-var currentVoltage = '52.54 Volts'
-var minVoltage = '60 Volts'
-var maxVoltage = '31 Volts'
+
 
 const Voltage = ({ className, ...rest }) => {
   const classes = useStyles();
@@ -79,19 +77,17 @@ const Voltage = ({ className, ...rest }) => {
           display="flex"
           alignItems="center"
         >
-         
          <AiIcons.AiOutlineArrowUp className={classes.maxVoltageIcon} />
           <Typography
             className={classes.maxVoltageValue}
             variant="body2"          >
-            Max Output :
+                Max Output :
           </Typography>
           <Typography
             variant="body3"
           >
             {maxVoltage}
           </Typography>
-          
         </Box>
         
         <Box
@@ -99,7 +95,6 @@ const Voltage = ({ className, ...rest }) => {
           display="flex"
           alignItems="center"
         >
-         
          <AiIcons.AiOutlineArrowDown className={classes.minVoltageIcon} />
           <Typography
             className={classes.voltageLabel}
@@ -112,9 +107,7 @@ const Voltage = ({ className, ...rest }) => {
           >
             {minVoltage}
           </Typography>
-          
         </Box>
-        
       </CardContent>
     </Card>
   );

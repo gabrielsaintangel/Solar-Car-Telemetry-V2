@@ -4,11 +4,8 @@ import PropTypes from 'prop-types';
 import { Line } from 'react-chartjs-2';
 import {
   Box,
-  Button,
-  Borders,
   Card,
   CardContent,
-  CardHeader,
   Divider,
   useTheme,
   makeStyles,
@@ -16,8 +13,6 @@ import {
   Grid,
   Typography
 } from '@material-ui/core';
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
-import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 
 
 
@@ -108,7 +103,6 @@ const OutputGraph = ({ className, ...rest }) => {
       {...rest}
     >
       <CardContent>
-        
         <Box
           height={300}
           position="relative"
@@ -123,7 +117,6 @@ const OutputGraph = ({ className, ...rest }) => {
               Output Over Past 3 Hours
             </Typography>
             </Grid>
-
         </Grid>
           <Line
             data={data}

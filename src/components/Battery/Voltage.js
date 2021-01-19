@@ -11,7 +11,6 @@ import {
   colors,
   makeStyles
 } from '@material-ui/core';
-import * as ImIcons from "react-icons/im";
 import * as AiIcons from "react-icons/ai";
 import * as FaIcons from "react-icons/fa"
 
@@ -114,9 +113,7 @@ const Voltage = ({ className, ...rest }) => {
           >
             {minVoltage}
           </Typography>
-          
         </Box>
-        
       </CardContent>
     </Card>
   );
